@@ -33,15 +33,21 @@
             }
         });
 
+        //Create timeline
+        var timeline = [];
 
+        //get participant identifiers
         const sona_id = jsPsych.data.getURLVariable('id');
-        var participant_id = jsPsych.randomization.randomID(10);
-        const filename = `${participant_id}.csv`;
+        const subject_id = jsPsych.randomization.randomID(10);
+        const filename = `${subject_id}.csv`;
+
+
+        const condition_num = await jsPsychPipe.getCondition("nIGJtVo5vZmR");
 
         // Add it to every trial's data
         jsPsych.data.addProperties({
             sona_id: sona_id,
-            participant_id: participant_id
+            subject_id: subject_id
         });
 
         /*
@@ -55,9 +61,6 @@
             session_id: session_id
         });
         */
-
-        //Create timeline
-        let timeline = [];
 
 
         // Set background color to gray //
@@ -441,9 +444,9 @@
             action: "save",
             experiment_id: "nIGJtVo5vZmR",
             filename: filename,
-            wait_message: "Please wait while the next page loads.",
             data_string: () => jsPsych.data.get().csv()
         };
+
         timeline.push(save_data);
     
         var debrief_script = {
