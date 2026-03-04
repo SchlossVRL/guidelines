@@ -24,13 +24,15 @@
         //Start jsPsych Experiment!!!
 
 
+        
         //Initiate jsPsych
         var jsPsych = initJsPsych({
             on_finish: function () {
                 // Save data locally as CSV
-                jsPsych.data.get().localSave('csv', 'experiment_data.csv');
+                jsPsych.data.get().localSave('csv', 'filename');
             }
         });
+
 
         const sona_id = jsPsych.data.getURLVariable('id');
         var participant_id = jsPsych.randomization.randomID(10);
@@ -114,14 +116,6 @@
             ]
         };
         timeline.push(preload);
-
-    /*
-        // graphs and desciptive text appear together
-        var image_text_pairs = [
-            { texture: "images/map1.png", text: "this chart shows the ideal and fatal temperatures for spawning and egg incubation of sockeye salmon. If river temperatures rise to a certain point, sockeye salmon populations will be negatively afffected" },
-            { texture: "images/map2.png", text: "Do you ever feel like a plastic bag, drifting through the wind wanting to start again?" },
-        ]
-    */
 
         // condition A pairs (CHANGE BLOCK SIZE TO FIT # OF PAIRS)
         var conditionA_pairs = [
@@ -261,7 +255,7 @@
         })
 
         //Consent signing
-     /*   var consentSign = {
+        var consentSign = {
             type: jsPsychSurveyMultiSelect,
             questions: [
                 {
@@ -329,9 +323,9 @@
             choices: ['Continue']
         };
 
-    */
+    
 
-        //timeline.push(demo_completion);
+        timeline.push(demo_completion);
 
 
 
@@ -442,16 +436,16 @@
         })
 
         //save the data
-    /*    const save_data = {
+        const save_data = {
             type: jsPsychPipe,
             action: "save",
-            experiment_id: "MuhCtA1AKP0Q",
+            experiment_id: "nIGJtVo5vZmR",
             filename: filename,
             wait_message: "Please wait while the next page loads.",
             data_string: () => jsPsych.data.get().csv()
         };
         timeline.push(save_data);
-    */
+    
         var debrief_script = {
             type: jsPsychHtmlKeyboardResponse,
             stimulus: '<div style="width:800px">Great job! You have finished the experiment.' +
