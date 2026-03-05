@@ -82,7 +82,7 @@
         const preload = {
             type: jsPsychPreload,
             images: [
-                'images/Salmon_NonTrunc.png',
+                'images/ExampleLitRate_NonTrunc.png',
                 'images/Salmon_Trunc.png',
                 'images/AvgEmployRate_NonTrunc_L_1.png',
                 'images/Vaccines_NonTrunc_L_1.png',
@@ -123,8 +123,8 @@
         // condition A pairs (CHANGE BLOCK SIZE TO FIT # OF PAIRS)
         var conditionA_pairs = [
  
-        { texture: "images/AvgEmployRate_NonTrunc_L_1.png", text: "This chart shows the average employment rates in Los Angeles and Chicago." },
-        { texture: "images/Vaccines_NonTrunc_L_1.png", text: "This chart shows Measles/DTP1 and DTP3  vaccine coverage percentage rates over different years." },
+        { texture: "images/AvgEmployRate_NonTrunc_L_1.png", text: "This chart shows the average employment rates in Los Angeles and Chicago over different years." },
+        { texture: "images/Vaccines_NonTrunc_L_1.png", text: "This chart shows Measles/DTP1 and DTP3 vaccine coverage percentage rates over different years." },
         { texture: "images/LifeExpec_NonTrunc_L_1.png", text: "This chart shows life expectancy in the United States and Germany over different years." },
         { texture: "images/PostHighComplete_NonTrunc_L_1.png", text: "This chart shows the rate of  education completion after high school in Mongolia and Australia." },
         { texture: "images/AnimalThreat_Trunc_L_1.png", text: "This charts shows the number of threatened animal species between Mexico and Brazil as of 2024." },
@@ -144,7 +144,7 @@
         // Condition B pairs
         var conditionB_pairs = [
         { texture: "images/AvgEmployRate_Trunc_L_2.png", text: "This chart shows the average employment rates in Los Angeles and Chicago over different years." },
-        { texture: "images/Vaccines_Trunc_L_2.png", text: "This chart shows Measles/DTP1 and DTP3  vaccine coverage percentage rates over different years." },
+        { texture: "images/Vaccines_Trunc_L_2.png", text: "This chart shows Measles/DTP1 and DTP3 vaccine coverage percentage rates over different years." },
         { texture: "images/LifeExpec_Trunc_L_2.png", text: "This chart shows life expectancy in the United States and Germany over different years." },
         { texture: "images/PostHighComplete_Trunc_L_2.png", text: "This chart shows the rate of  education completion after high school in Mongolia and Australia." },
         { texture: "images/AnimalThreat_NonTrunc_L_2.png", text: "This charts shows the number of threatened animal species between Mexico and Brazil as of 2024." },
@@ -154,7 +154,7 @@
         { texture: "images/Football_Trunc_S_2.png", text: "This chart shows the percentage of total football wins of Wisconsin Badger vs Michigan Wolverines." },
         { texture: "images/WiFiSpeed_Trunc_S_2.png", text: "This chart shows the average Wifi download speed in Mbps in UK and US over different years." },
         { texture: "images/CollegeEnroll_Trunc_S_2.png", text: "This chart shows total student enrollment at UW-Seattle and the UW-Madison over different years." },
-        { texture: "images/AvgEmployRate_Trunc_L_2.png", text: "This chart shows average screentime use for youtube and tiktok in minutes across different years." },
+        { texture: "images/Screentime_Trunc_L_2.png", text: "This chart shows average screentime use for youtube and tiktok in minutes across different years." },
         { texture: "images/InternetUse_NonTrunc_S_2.png", text: "This chart shows the global share of internet users of different age groups accessing e-mail services as of 2025." },
         { texture: "images/LiteracyRate_NonTrunc_S_2.png", text: "This chart shows the global youth literacy rate between 2020 and 2024, by gender." },
         { texture: "images/SocialMedia_NonTrunc_S_2.png", text: "This chart shows the distribution of social media platform usage in Brazil as of August 2024, by gender." },
@@ -338,7 +338,7 @@
             stimulus: `
                 <div style="text-align:left;">
                     <p style="margin-bottom:5px;">In this experiment you will view a series of charts like the ones below and read a short explaination of the data shown in the chart.
-                        For each chart, please think about what you notice in the chart and then provide 1-3 sentences about what you notice about the patterns of data in the chart, by entering your response the text box below the chart. The example chart on the left shows the literacy rate in Nicaragua and Portugal over different years. The example chart on the right shows the ideal and fatal temperatures for spawning and egg incubation of sockeye salmon.</p><br>
+                        For each chart, please think about what you notice about the pattern of data in the chart and then provide 1-3 sentences about what you notice by entering your response the text box below the chart. The example chart on the left shows the literacy rate in Nicaragua and Portugal over different years. The example chart on the right shows the ideal and fatal temperatures for spawning and egg incubation of sockeye salmon.</p><br>
                          <div style="text-align:center;">
 
                             <div style="display:flex; justify-content:center; gap:20px; margin-bottom:10px;">
@@ -349,7 +349,7 @@
                             <label style="display:block; margin:5px 0 2px 0;">What do you notice about the pattern of data in the chart?</label>
                         </div>
 
-                    <p style="margin-bottom:5px;">After you type your response, the button labeled "Next" will be activated and you will be able to proceed to the next trial. <br>
+                    <p style="margin-bottom:5px;">After you type your response in the text box, the button labeled "Next" will be activated and you will be able to proceed to the next trial. <br>
                         The experiment will take about 30 minutes, and there are 4 blocks of trials. You will be notified when you have completed each block. <br>
                         Press 'Continue' when you are ready to begin.</p>
                 </div>
@@ -448,9 +448,9 @@
         var debrief_script = {
             type: jsPsychHtmlKeyboardResponse,
             stimulus: '<div style="width:800px">Great job! You have finished the experiment.' +
-                '<p>The goal of this experiment is to investigate what factors influence the way people interpret the meanings of charts. In a series of trials, you indicated what you noticed in each of the charts. Some people may have seen different versions of the charts that represented the same data.</p>' +
+                '<p>The goal of this experiment is to investigate what factors influence the way people interpret the meanings of charts. In a series of trials, you indicated what you noticed about the pattern of data in each of the charts. Some people may have seen different versions of the charts that represented the same data.</p>' +
                 '<p>We are interested in understanding how different design factors influence how the data represented in charts is interpreted in different contexts.</p>' +
-                '<p>Thank you for participating! Your credit will be updated on Sona within a few days.</p>' +
+                '<p>Thank you for participating! Your credit will be updated on SONA within a few days.</p>' +
                 '<p>You may press the "esc" key to end the experiment and exit full screen.</p>' +
                 '</div>',
             choices: ['NO_KEYS']
